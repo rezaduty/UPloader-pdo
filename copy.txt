@@ -1,0 +1,16 @@
+Automatic copying to clipboard may be dangerous, therefore most browsers (except IE) make it very difficult. Personally, I use the following simple trick:
+
+function copyToClipboard(text) {
+  window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+}
+The user is presented with the prompt box, where the text to be copied is already selected. Now it's enough to press Ctrl+C and Enter (to close the box) -- and voila!
+
+Now the clipboard copy operation is SAFE, because the user does it manually (but in a pretty straightforward way). Of course, works in all browsers.
+
+<button id="demo" onclick="copyToClipboard(document.getElementById('demo').innerHTML)">This is what I want to copy</button>
+
+<script>
+  function copyToClipboard(text) {
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+  }
+</script> 

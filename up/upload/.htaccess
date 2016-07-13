@@ -1,0 +1,9 @@
+Options +Indexes 
+# or #
+#  baraye list shodan file ha IndexOptions +FancyIndexing #
+IndexIgnore *
+Options -Indexes
+<FilesMatch "\.(?:inc|php|htaccess|asp|pl|py|rb)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
